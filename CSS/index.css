@@ -1,0 +1,60 @@
+body {
+    background-color: linen;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  h1 {
+    color: maroon;
+    margin-left: 40px;
+  }
+
+  button{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    width: 1fr;
+    text-decoration: none;
+  }
+
+  .header-img{
+    height: 200px;
+    min-width: 100%;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    scale: 100%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 1;
+  }
+
+  .nav_bar{
+    color: linen;
+    display: flex;
+  }
+
+  .nav-button{
+    display: inline;
+    position: relative;
+    padding-right: 1fr;
+  }
+
+  .dropdown-button{
+    display: inline-block;
+  }
+
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .dropdown-content a{
+    display: block;
+  }
+
+  .dropdown-button:hover .dropdown-content {
+    position: relative;
+    display: block;
+  }

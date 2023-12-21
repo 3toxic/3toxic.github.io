@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-        Jason's Website
-    </title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Jason's Website </title>
+
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img class="header-img" src="Images/header.png">
 
+    <div class="nav-bar">
+        <div style="display: inline;">
+            <a href="./index">
+                <button type="button" class="nav-button">
+                    Home
+                </button>
+            </a>
+        </div>
+
+        <a href="./aboutme">
+            <button type="button" class="nav-button">
+                About Me
+            </button>
+        </a>
+
+        <div class="dropdown-button">
+            <button type="button" class="nav-button">
+                Software &#9660;
+            </button>
+
+            <div class="dropdown-content">
+                <a href="./aboutme">Project 1</a>
+                <a href="./aboutme">Project 2</a>
+            </div>
+        </div>
+
+        <a href="./aboutme">
+            <button type="button" class="nav-button">
+                Hardware
+            </button>
+        </a>
+
+        <a href="./contact">
+            <button type="button" class="nav-button">
+                Contact Info
+            </button>
+        </a>
+    </div>
     <h1>
         This is a heading
     </h1>
     <p>
-        This is a paragraph.
+        This is a paragraph blah blah blah. Imagine writing out your life story on a website for anybody to see.
     </p>
-    <p>
-        This is to check the live server.
-    </p>
-
-    <a href="./aboutme">
-        <button type="button">
-            About Me
-        </button>
-    </a>
 </body>
 </html>
