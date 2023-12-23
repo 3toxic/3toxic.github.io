@@ -12,51 +12,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img class="header-img" src="Images/header.png">
+    <img class="header-img" src="Images/header.PNG">
 
     <div class="nav-bar">
-        <div style="display: inline;">
+        <ul>
+        <li>
             <a href="./index">
                 <button type="button" class="nav-button">
                     Home
                 </button>
             </a>
-        </div>
+        </li>
+        <li>   
+            <a href="./aboutme">
+                <button type="button" class="nav-button">
+                    About Me
+                </button>
+            </a>
+        </li>
+        <li>
+            <div class="dropdown-button">
+                <button type="button" class="nav-button">
+                    Software &#9660;
+                </button>
 
-        <a href="./aboutme">
-            <button type="button" class="nav-button">
-                About Me
-            </button>
-        </a>
-
-        <div class="dropdown-button">
-            <button type="button" class="nav-button">
-                Software &#9660;
-            </button>
-
-            <div class="dropdown-content">
-                <a href="./aboutme">Project 1</a>
-                <a href="./aboutme">Project 2</a>
+                <div class="dropdown-content">
+                    <a href="./aboutme">Project 1</a>
+                    <a href="./aboutme">Project 2</a>
+                </div>
             </div>
-        </div>
+        </li>
 
-        <a href="./aboutme">
-            <button type="button" class="nav-button">
-                Hardware
-            </button>
-        </a>
-
-        <a href="./contact">
-            <button type="button" class="nav-button">
-                Contact Info
-            </button>
-        </a>
+        <li>
+            <a href="./aboutme">
+                <button type="button" class="nav-button">
+                    Hardware
+                </button>
+            </a>
+        </li>
+    
+        <li>
+            <a href="./contact">
+                <button type="button" class="nav-button">
+                    Contact Info
+                </button>
+            </a>
+        </li>
+        </ul>
+       
     </div>
     <h1>
         This is a heading
     </h1>
-    <p>
-        This is a paragraph blah blah blah. Imagine writing out your life story on a website for anybody to see.
-    </p>
+    <div class="info-box">
+        <div class="info-text">
+            <p>
+                This is a paragraph blah blah blah. Imagine writing out your life story on a website for anybody to see.
+            </p>
+        </div>
+        <div class="info-img">
+            <img class="profile-img" src="Images/profile.jpg">
+        </div>
+    </div>
+
 </body>
 </html>
