@@ -1,13 +1,16 @@
 body {
-    background-color: linen;
+    background-color: rgb(250, 245, 250);
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
   }
   
   h1 {
-    color: maroon;
-    margin-left: 40px;
+    color:black;
+    margin-top: 60px;
+    margin-left: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
   }
 
   button{
@@ -23,6 +26,7 @@ body {
   .header-img{
     height: 200px;
     width: 100%;
+    min-width: 1800px;
     margin-top: 0px;
     margin-bottom: 20px;
     margin: 0px;
@@ -30,7 +34,6 @@ body {
     scale: fixed;
     object-fit: cover;
     object-position: top;
-    opacity: 1;
   }
 
   .nav-bar{
@@ -45,6 +48,7 @@ body {
     background-color: rgb(120, 120, 120);
     height: 40px;
     width: 100%;
+    min-width: 400px;
     padding-right: 0px;
     list-style: none;
     justify-content: space-between;
@@ -54,7 +58,6 @@ body {
     float: left;
     padding-left: 20px;
     padding-right: 20px;
-    width: 1fr;
   }
 
   .nav-button{
@@ -117,19 +120,39 @@ body {
     display: block;
   }
 
+  .contact-grid{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+  }
 
   .contact-box{
-    margin-left: 40px;
-    height: 40px;
-    width: 400px;
-    margin-bottom: 20px;
+    width: 200px;
+    justify-content: center;
   }
 
   .img-logo{
-    height: 100%;
-    display: inline-block;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-button{
+    margin-top: 10px;
+    height: 60px;
+    width: 100px;
+    background-color: rgb(240,235,240);
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: large;
+    position: relative;
+    left: 25%;
+    right: 25%;
   }
 
-  .text-logo{
-    display:inline-block;
+  .contact-button:hover{
+    background-color: rgb(220, 215, 220);
+    box-shadow: 3px;
   }
