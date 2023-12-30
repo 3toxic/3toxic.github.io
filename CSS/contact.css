@@ -8,9 +8,10 @@ body {
   h1 {
     color:black;
     margin-top: 60px;
-    margin-left: 60px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    font-size: 2.5em;
+    display: block;
   }
 
   button{
@@ -24,7 +25,7 @@ body {
   }
 
   .header-img{
-    height: 200px;
+    height: 250px;
     width: 100%;
     min-width: 1800px;
     margin-top: 0px;
@@ -42,6 +43,7 @@ body {
     margin-right: 20px;
     display: flex;
     height: 40px;
+    min-width: 650px;
   }
 
   .nav-bar ul{
@@ -52,6 +54,7 @@ body {
     padding-right: 0px;
     list-style: none;
     justify-content: space-between;
+    overflow: none;
   }
 
   .nav-bar li{
@@ -66,6 +69,8 @@ body {
     position: relative;
     box-shadow: none;
     border-width: 0px;
+    height: 40px;
+    font-size: 14px;
   }
 
   .curr-button{
@@ -77,8 +82,10 @@ body {
     border-right: 0px;
     border-top: 0px;
     padding-top: 4px;
-    border-width: 3px;
+    border-width: -3px;
     border-color: rgb(0, 0, 75);
+    height: 40px;
+    font-size: 14px;
   }
 
   .nav-button:hover{
@@ -120,12 +127,19 @@ body {
     display: block;
   }
 
+  .title-box{
+    margin-left: 240px;
+    margin-right: 240px;
+    min-width: 700px;
+  }
+
   .contact-grid{
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 40px;
+    margin-left: 240px;
+    margin-right: 240px;
+    min-width: 700px;
+    margin-top: 80px;
   }
 
   .contact-box{
@@ -136,20 +150,19 @@ body {
   .img-logo{
     height: 100px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 50px;
   }
+
   .contact-button{
-    margin-top: 10px;
+    margin-top: 25px;
     height: 60px;
-    width: 100px;
+    width: 140px;
     background-color: rgb(240,235,240);
     border-width: 1px;
     border-radius: 10px;
     font-size: large;
     position: relative;
-    left: 25%;
-    right: 25%;
+    margin-left: 30px;
   }
 
   .contact-button:hover{

@@ -8,15 +8,10 @@ body {
   h1 {
     color:black;
     margin-top: 60px;
-    margin-left: 60px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
     font-size: 2.5em;
-  }
-
-  button{
-    font-family: "Rubik", Arial, Helvetica, sans-serif;
-    color: black;
-    height: 40px;
+    display: block;
   }
 
   a{
@@ -40,8 +35,8 @@ body {
     margin-top: 0px;
     margin-left: 20px;
     margin-right: 20px;
-    height: 40px;
     display: flex;
+    height: 40px;
     min-width: 650px;
   }
 
@@ -49,8 +44,10 @@ body {
     background-color: rgb(120, 120, 120);
     height: 40px;
     width: 100%;
+    min-width: 400px;
     padding-right: 0px;
     list-style: none;
+    justify-content: space-between;
     overflow: none;
   }
 
@@ -63,10 +60,13 @@ body {
   .nav-button{
     background-color: rgb(120, 120, 120);
     display: block;
-    position: relative;
+    position: absolute;
     box-shadow: none;
     border-width: 0px;
+    height: 40px;
     font-size: 14px;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    color: black;
   }
 
   .curr-button{
@@ -77,10 +77,13 @@ body {
     border-left: 0px;
     border-right: 0px;
     border-top: 0px;
+    padding-top: 4px;
     border-width: -3px;
     border-color: rgb(0, 0, 75);
     height: 40px;
     font-size: 14px;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    color: black;
   }
 
   .nav-button:hover{
@@ -108,6 +111,7 @@ body {
     height: 30px;
     padding-top: 7px;
     padding-left: 7px;
+    padding-right: 7px;
     color: black;
     background-color: rgb(120, 120, 120);
   }
@@ -120,26 +124,4 @@ body {
   .dropdown-button:hover .dropdown-content {
     position: relative;
     display: block;
-  }
-
-  .info-box{
-    display: grid;
-    margin-left: 60px;
-    margin-right: 60px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .info-text{
-    display: inline-block;
-    margin-top: 20px;
-    margin-right: 60px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .info-img{
-    display: inline-block;
-  }
-  .profile-img{
-    width: 100%;
-    scale: 70%
   }
