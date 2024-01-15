@@ -72,22 +72,34 @@
 
     <div class="project-box">
         <div class="text-box">
+            <h2>
+                WARG FPV Drone Antenna
+            </h2>
+
             <p>
-                This is the description for the project
+                Waterloo Aerial Robotics Group
+                <br>
+                2023
+            </p>
+
+            <p>
+                I worked on drone antenna thing. Did design of CAD and such. Did
+                a basic version for the first year's competition and then improved on it 
+                for the next year. Did electronics and stuff too. 3D printed and prototyped.
             </p>
 
             <div class="funny-thing">
                 <p>
                     Utilized skills
-                </p>
+                </p>>
                 <div class="funny-box">
-                    <p style="display: inline; background-color: aqua; border-radius: 6px;">
+                    <p class="skill" style="background-color: aqua">
                         Skill 1
                     </p>
-                    <p>
+                    <p class="skill" style="background-color: lightgreen">
                         Skill 2
                     </p>
-                    <p>
+                    <p class="skill" style="background-color: yellow">
                         Skill 3
                     </p>
                 </div>
@@ -96,70 +108,74 @@
 
         <div class="image-box">
             <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="Images/antenna1.jpg" class="slideshow-img">
-                <div class="text">Caption Text</div>
+                <img src="Images/antenna1.jpg" class="slide-img">
+                <div class="caption">
+                    Caption One
+                </div>
             </div>
               
             <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="Images/antenna2.jpg" class="slideshow-img">
-                <div class="text">Caption Two</div>
+                <img src="Images/antenna2.jpg" class="slide-img">
+                <div class="caption">
+                    Caption Two
+                </div>
             </div>
             
             <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="Images/antenna3.png" class="slideshow-img">
-                <div class="text">Caption Three</div>
+                <img src="Images/antenna3.png" class="slide-img">
+                <div class="caption">
+                    Caption Three
+                </div>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
+            <a class="prev" onclick="moveSlide(-1)">
+                ❮
+            </a>
+            <a class="next" onclick="moveSlide(1)">
+                ❯
+            </a>
 
             <br>
-              
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
+
+            <div class="dot-box">
+                <span class="dot" onclick="slide(1)"></span> 
+                <span class="dot" onclick="slide(2)"></span> 
+                <span class="dot" onclick="slide(3)"></span> 
             </div>
         </div>
+
+
     </div>
 
     <script>
-        let slideIndex=1;
+        let slideIndex = 0;
         showSlides(slideIndex);
-        
+
         function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            let active = document.getElementsByClassName("active");
 
-          if (n>slides.length){
-              slideIndex = 1;
-            }    
-
-          if (n<1) {
-            slideIndex=slides.length;
+            slideIndex = slideIndex%slides.length;
+            
+            for (i=0; i<slides.length; i++){
+                slides[i].style.display = "none";
             }
-        
-          for (i=0; i<slides.length; i++){
-            slides[i].style.display = "none";  
-          }
 
-          for (i=0; i<dots.length; i++){
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
+            for (i=0; i<active.length; i++){
+                active[i].className = "dot";
+            }
 
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += "active";
+            slides[slideIndex].style.display = "block";  
+            dots[slideIndex].className = "active";
         }
 
-        function plusSlides(n) {
+        function moveSlide(n) {
           showSlides(slideIndex += n);
         }
         
-        function currentSlide(n) {
+        function slide(n) {
           showSlides(slideIndex = n);
         }
     </script>

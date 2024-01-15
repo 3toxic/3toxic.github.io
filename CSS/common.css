@@ -22,8 +22,10 @@ body {
   a{
     text-decoration: none;
   }
+
   p{
     font-family: 'Segoe UI', Tahoma, Verdana, Geneva, sans-serif;
+    font-size: 1em;
   }
 
   .header-img{
@@ -135,4 +137,3 @@ body {
     position: relative;
     display: block;
   }
-
