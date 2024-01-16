@@ -1,13 +1,57 @@
+h1 {
+  margin-left: 180px;
+}
+
+h3{
+  font-family: "Playfair Display";
+  padding-top: 20px;
+}
+
 .project-box{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 700px;
+  margin-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 200px;
+  background-color:rgba(255, 228, 196, 0.6);
+  min-width: 1600px;
+}
+
+.text-box{
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding: 0px 80px 80px 80px;
+}
+
+.skill-box{
+  text-align: center;
+}
+
+.skills{
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: space-between;
+}
+
+.skill{
+  display: inline; 
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .image-box{
   align-content: center;
   position: relative;
-  margin-top: 50px;
+  margin-left: 200px;
+  height: 500px;
+  width: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .mySlides {
@@ -17,9 +61,7 @@
 .slide-img{
   width: 100%;
   object-fit: cover;
-  height: 600px;
-  margin: 0;
-  padding: 0;
+  height: 500px;
 }
 
 .prev, .next {
@@ -40,17 +82,18 @@
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .caption{
   font-family: 'Segoe UI', Tahoma, Verdana, Geneva, sans-serif;
-  color: black;
+  color: rgb(20, 20, 20);
   position: relative;
   font-size: 1em;
-  height: 1em;
-  margin-top: -2em;
+  margin-top: -32px;
+  padding: 4px;
   text-align: center;
+  background-color:rgba(255, 255, 255, 0.2)
 }
 
 .dot {
@@ -61,14 +104,13 @@
   background-color: rgb(200, 200, 200);
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.3s ease;
 }
 
 .dot-box{
   text-align: center;
   display: block;
   display: absolute;
-  bottom: 0%;
   height: 20px;
 }
 
@@ -90,15 +132,4 @@
 @keyframes fade {
   from {opacity: .8} 
   to {opacity: 1}
-}
-
-.skill{
-  display: inline; 
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.text-box{
-  position: relative;
-  padding: 40px;
 }

@@ -1,21 +1,27 @@
-  .info-box{
-    display: grid;
-    margin-left: 60px;
-    margin-right: 60px;
-    grid-template-columns: 1fr 1fr;
-  }
+h1{
+  margin-left: 60px;
+}
 
-  .info-text{
-    display: inline-block;
-    margin-top: 20px;
-    margin-right: 60px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+.info-box{
+  display: grid;
+  margin-left: 60px;
+  margin-right: 60px;
+  grid-template-columns: 1fr 1fr;
+}
 
-  .info-img{
-    display: inline-block;
-  }
-  .profile-img{
-    width: 100%;
-    scale: 70%
-  }
+.info-text{
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-img{
+  display: inline-block;
+  height: 600px;
+  width: 600px;
+}
+.profile-img{
+  margin: 20%;
+  width: 100%;
+}

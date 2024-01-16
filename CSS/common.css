@@ -8,7 +8,6 @@ body {
   h1 {
     color:black;
     margin-top: 60px;
-    margin-left: 60px;
     font-family: "Mate", "Playfair Display", Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5em;
   }
@@ -25,35 +24,32 @@ body {
 
   p{
     font-family: 'Segoe UI', Tahoma, Verdana, Geneva, sans-serif;
-    font-size: 1em;
   }
 
   .header-img{
     height: 250px;
     width: 100%;
     min-width: 1800px;
-    margin-top: 0px;
-    margin-bottom: 20px;
     margin: 0px;
-    margin-right: 0px;
     scale: fixed;
     object-fit: cover;
     object-position: top;
   }
 
   .nav-bar{
+    vertical-align: top;
     margin-top: 0px;
-    margin-left: 20px;
-    margin-right: 20px;
     height: 40px;
     display: flex;
     min-width: 825px;
   }
 
   .nav-bar ul{
+    vertical-align: top;
     background-color: rgb(120, 120, 120);
     height: 40px;
     width: 100%;
+    margin: 0;
     padding-right: 0px;
     list-style: none;
   }
@@ -70,12 +66,13 @@ body {
     box-shadow: none;
     border-width: 0px;
     font-size: 14px;
-    width:105px;
+    width: 105px;
     margin-left: 20px;
     margin-right: 20px;
     height: 40px;
     font-family: "Rubik", Arial, Helvetica, sans-serif;
     cursor: pointer;
+    transition: 0.2s ease;
   }
 
   .curr-button{
@@ -95,6 +92,7 @@ body {
     border-color: rgb(0, 0, 75);
     font-family: "Rubik", Arial, Helvetica, sans-serif;
     cursor: pointer;
+    transition: 0.2s ease;
   }
 
   .nav-button:hover{
@@ -126,6 +124,7 @@ body {
     color: black;
     background-color: rgb(120, 120, 120);
     font-family: "Rubik", Arial, Helvetica, sans-serif;
+    transition: 0.2s ease;
   }
 
   .dropdown-content a:hover{

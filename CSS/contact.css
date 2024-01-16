@@ -1,42 +1,44 @@
-  .title-box{
-    margin-left: 240px;
-    margin-right: 240px;
-    min-width: 700px;
-  }
+h1{
+  text-align: center;
+}
 
-  .contact-grid{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 240px;
-    margin-right: 240px;
-    min-width: 700px;
-    margin-top: 80px;
-  }
+.title-box{
+  margin-left: 20%;
+  margin-right: 20%;
+}
 
-  .contact-box{
-    width: 200px;
-    justify-content: center;
-  }
+.contact-grid{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 80px;
+}
 
-  .img-logo{
-    height: 100px;
-    display: block;
-    margin-left: 50px;
-  }
+.contact-box{
+  width: 200px;
+  justify-content: center;
+}
 
-  .contact-button{
-    margin-top: 25px;
-    height: 60px;
-    width: 140px;
-    background-color: rgb(240,235,240);
-    border-width: 1px;
-    border-radius: 10px;
-    font-size: large;
-    position: relative;
-    margin-left: 30px;
-  }
+.img-logo{
+  height: 100px;
+  display: block;
+  margin-left: 50px;
+}
 
-  .contact-button:hover{
-    background-color: rgb(220, 215, 220);
-    box-shadow: 3px;
-  }
+.contact-button{
+  margin-top: 25px;
+  height: 60px;
+  width: 140px;
+  background-color: rgb(240,235,240);
+  border-width: 1px;
+  border-radius: 10px;
+  font-size: large;
+  position: relative;
+  margin-left: 30px;
+}
+
+.contact-button:hover{
+  background-color: rgb(220, 215, 220);
+  box-shadow: 3px;
+}
