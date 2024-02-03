@@ -1,25 +1,210 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-        Jason's Website
-    </title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> About Me </title>
     <link rel="icon" type="image/x-icon" href="Images/favicon.jpg">
+
+    <link rel="stylesheet" href="CSS/aboutme.css">
+    <link rel="stylesheet" href="CSS/common.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Droid Sans' rel='stylesheet'>
 
 </head>
 <body>
+    <img class="header-img" src="Images/header.jpg">
+
+    <div class="nav-bar">
+        <ul>
+        <li>
+            <a href="./index" style="cursor: default;">
+                <button type="button" class="nav-button">
+                    Home
+                </button>
+            </a>
+        </li>
+        <li>   
+            <a href="./aboutme" style="cursor: default;">
+                <button type="button" class="curr-button">
+                    About Me
+                </button>
+            </a>
+        </li>
+        <li>
+            <div class="dropdown-button" style="cursor: default;">
+                <button type="button" class="nav-button">
+                    Software &#9660;
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="https://github.com/3toxic/3toxic.github.io"> Personal Website</a>
+                    <a href="https://github.com/3toxic/anime-database">Anime Database</a>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <a href="./hardware" style="cursor: default;">
+                <button type="button" class="nav-button">
+                    Hardware
+                </button>
+            </a>
+        </li>
+    
+        <li>
+            <a href="./contact" style="cursor: default;">
+                <button type="button" class="nav-button">
+                    Contact Info
+                </button>
+            </a>
+        </li>
+        </ul>
+    </div>
 
     <h1>
         About Me
     </h1>
-    <p>
-        This page is WIP
-    </p>
 
-    <a>
-        
-    </a>
+    <h2>
+        Work Experience
+    </h2>
+
+    <div class="timeline">
+        <div class="timeline-box timeleft">
+            <div class="time-text">
+                <h2>
+                    Job Title
+                </h2>
+                <h3>
+                    Place and duration
+                </h3>
+                <p>
+                    Here's what I did ahaha
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-box timeright">
+            <div class="time-text">
+                <h2>
+                    Job Title
+                </h2>
+                <h3>
+                    Place and duration
+                </h3>
+                <p>
+                    Here's what I did ahaha
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-box timeleft">
+            <div class="time-text">
+                <h2>
+                    Job Title
+                </h2>
+                <h3>
+                    Place and duration
+                </h3>
+                <p>
+                    Here's what I did ahaha
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <h2 style="margin-top: 64px;">
+        My Hobbies
+    </h2>
+    
+    <div class="collage-box">
+        <div class="collage">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+        </div>
+    </div>
+
+    <div id="popup">
+    
+        <span class="close-button" onclick="closeImg()">
+            x
+        </span>
+        <img src="" id="popup-img">
+
+    </div>
+
+    <script>
+        let i;
+
+        //transition stuff
+        // nav = document.getElementsByClassName("nav-bar");
+        // anav = nav.item(0).getElementsByTagName('a');
+
+        // for (i=0; i<anav.length; i++){
+        //     anav[i].style.transition = "0.2s ease";
+        // }
+
+        //timeline scrolling stuff
+        const timelineElement = document.getElementsByClassName("timeline-box");
+        const textBox = document.getElementsByClassName("time-text");
+
+        window.addEventListener("scroll", timelineUpdate);
+        const middle = window.innerHeight/2;
+        timelineUpdate();
+
+        function getCenter(item){
+            var top = item.getBoundingClientRect().top;
+            var bot = item.getBoundingClientRect().bottom;
+            return (top+bot)/2;
+        }
+
+        function timelineUpdate(){
+            for (i=0; i<textBox.length; i++){
+                if(timelineElement[i].getBoundingClientRect().bottom>0 && timelineElement[i].getBoundingClientRect().top<innerHeight){
+                    var size = Math.abs(getCenter(timelineElement[i])-middle)/middle;
+                    if (textBox[i].parentElement.className.includes("timeleft")){
+                        textBox[i].style.margin = `0px ${80-Math.min((Math.max(0, (1-size)*40)), 40)}px 0px ${40+Math.min((Math.max(0, size*160)), 160)}px`;
+                    }
+                    else{
+                        textBox[i].style.margin = `0px ${40+Math.min((Math.max(0, size*160)), 160)}px 0px ${80-Math.min((Math.max(0, (1-size)*40)), 40)}px`;
+                    }
+                    var tall = 80-Math.min((Math.max(0, size*40)), 40);
+                    textBox[i].style.height = `${tall}%`;
+                    textBox[i].style.top = `${(100-tall)/2}%`;
+                    textBox[i].style.bottom = `${(100-tall)/2}%`;
+
+                    textBox[i].style.opacity = `${Math.min((Math.max(0.2, (1-size))), 1)}`;
+                }
+            }
+        }
+
+        function showImg(imgref){
+            popupImg = document.getElementById("popup-img")
+            popupImg.src = imgref;
+
+            popupBox = document.getElementById("popup");
+            popup.style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeImg(){
+            popupBox = document.getElementById("popup");
+            popup.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
 
 </body>
 </html>
