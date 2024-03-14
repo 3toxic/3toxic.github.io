@@ -9,14 +9,20 @@
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/common.css">
 
+    <!-- <link rel="script" href="test.js"> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mate&family=Playfair+Display:ital@1&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Droid Sans' rel='stylesheet'>
+
 </head>
 <body>
     <img class="header-img" src="Images/header.jpg">
 
-    <div class="nav-bar">
+    <div id="nav-bar">
         <ul>
         <li>
             <a href="./index">
@@ -112,5 +118,17 @@
         </div>
     </div>
 
+
+    <script>
+        anav = document.getElementById("nav-bar").getElementsByTagName('button');
+        dropbutton = document.getElementsByClassName("dropdown-content")[0].getElementsByTagName("a");
+
+        for (i=0; i<anav.length; i++){
+            anav[i].style.transition = "0.2s ease";
+        }
+        for (i=0; i<dropbutton.length; i++){
+            dropbutton[i].style.transition = "0.2s ease";
+        }
+    </script>
 </body>
 </html>

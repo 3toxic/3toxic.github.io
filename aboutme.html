@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mate&family=Playfair+Display:ital@1&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Droid Sans' rel='stylesheet'>
 
 </head>
@@ -69,7 +71,7 @@
         About Me
     </h1>
 
-    <h2>
+    <h2 style="margin-left: 60px;">
         Work Experience
     </h2>
 
@@ -77,10 +79,14 @@
         <div class="timeline-box timeleft">
             <div class="time-text">
                 <h2>
-                    Job Title
+                    Research Assistant
                 </h2>
                 <h3>
-                    Place and duration
+                    BC Cancer, Vancouver BC
+                </h3>
+
+                <h3 style="float:right;">
+                    May 2023 - July 2023
                 </h3>
                 <p>
                     Here's what I did ahaha
@@ -91,41 +97,29 @@
         <div class="timeline-box timeright">
             <div class="time-text">
                 <h2>
-                    Job Title
+                    R&D Intern
                 </h2>
                 <h3>
-                    Place and duration
+                    Huate Gas, Guangzhou CN
+                </h3>
+                <h3 style="float:right;">
+                    January 2024 - April 2024
                 </h3>
                 <p>
                     Here's what I did ahaha
                 </p>
             </div>
         </div>
-
-        <div class="timeline-box timeleft">
-            <div class="time-text">
-                <h2>
-                    Job Title
-                </h2>
-                <h3>
-                    Place and duration
-                </h3>
-                <p>
-                    Here's what I did ahaha
-                </p>
-            </div>
-        </div>
-
     </div>
 
-    <h2 style="margin-top: 64px;">
+    <h2 style="margin-top: 64px; margin-left: 60px;">
         My Hobbies
     </h2>
-    
+
     <div class="collage-box">
         <div class="collage">
-            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
-            <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/anime9x9.png" class="collage-img" onclick="showImg(src)">
+            <img src="Images/tea.jpeg" class="collage-img" onclick="showImg(src)">
             <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
             <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
             <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
@@ -135,13 +129,27 @@
             <img src="Images/antenna3.png" class="collage-img" onclick="showImg(src)">
         </div>
     </div>
+
+    <p class="gallery-disclaimer">
+        *Image gallery is rather sparse as it seems I do not have many images of myself
+    </p>
 
     <div id="popup">
     
         <span class="close-button" onclick="closeImg()">
             x
         </span>
-        <img src="" id="popup-img">
+        <div class="popup-img-box">
+            <img src="" id="popup-img">
+            <span id="popup-caption">
+                Here's some text
+            </span>
+        </div>
+        <!-- <img src="" id="popup-img">
+        <span id="popup-caption">
+            Here's some text
+        </span> -->
+
 
     </div>
 
@@ -173,6 +181,7 @@
         function timelineUpdate(){
             for (i=0; i<textBox.length; i++){
                 if(timelineElement[i].getBoundingClientRect().bottom>0 && timelineElement[i].getBoundingClientRect().top<innerHeight){
+          
                     var size = Math.abs(getCenter(timelineElement[i])-middle)/middle;
                     if (textBox[i].parentElement.className.includes("timeleft")){
                         textBox[i].style.margin = `0px ${80-Math.min((Math.max(0, (1-size)*40)), 40)}px 0px ${40+Math.min((Math.max(0, size*160)), 160)}px`;
@@ -191,8 +200,11 @@
         }
 
         function showImg(imgref){
-            popupImg = document.getElementById("popup-img")
+            popupImg = document.getElementById("popup-img");
             popupImg.src = imgref;
+            // setCaption();
+
+            // let out = window.addEventListener(new KeyboardEvent = "esc", closeImg);
 
             popupBox = document.getElementById("popup");
             popup.style.display = "block";
@@ -203,6 +215,16 @@
             popupBox = document.getElementById("popup");
             popup.style.display = "none";
             document.body.style.overflow = "auto";
+
+            window.removeEventListener(out)
+        }
+
+        function setCaption(){
+            popupImg = document.getElementById("popup-img");
+            popupCaption = document.getElementById("popup-caption");
+            // popupCaption.style.width = `${popupImg.width}px`;
+            // console.log(popupImg.getBoundingClientRect());
+            console.log(popupImg.width);
         }
     </script>
 
